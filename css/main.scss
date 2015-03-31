@@ -1,0 +1,120 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+@import "variables.scss";
+@import "pages.scss";
+@import "blog.scss";
+
+
+h3 {
+	margin-left: 10px;
+	margin-right: 10px;
+	text-align: center;
+
+	i {
+		size: 12px;
+		margin-right: 10px;
+
+		&:nth-child(2) {
+			margin-left: 10px;
+			margin-right: 0px;
+		}
+	}
+}
+
+a {
+	color: $base-color;
+
+	&:hover {
+		color: $primary-accent;
+	}
+}
+
+.navigation {
+	text-align: center;
+
+	ul {
+		margin: auto;
+		padding: 0;
+		list-style-type: none;
+		font-family: $header-font;
+
+
+		li {
+			margin-left: 20px;
+			display: inline;
+
+			&:first-child {
+				margin-left: 0px;
+			}
+
+			a {
+				color: $base-color;
+				font-size: 1.25em;
+
+				&:hover {
+					margin-top: 10px;
+					margin-bottom: 10px;
+					border-top: 2px solid $primary-accent;
+					border-bottom: 2px solid $primary-accent;
+					text-decoration: none;
+					color: $primary-accent;
+				}
+			}
+		}
+
+		.logo {
+			img {
+				margin-left: 20px;
+				margin-right: 20px;
+				width: 75px;
+				background-color: #FFFFFF;
+			}
+
+			a {
+				&:hover {
+					margin-top: 0;
+					margin-bottom: 0;
+					border: none;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+.top-diagonal {
+	background: url('../images/diagonal-fill.png') repeat-x left top;
+
+	ul {
+		margin-top: 30px;
+	}
+}
+
+.bottom-diagonal {
+	background: url('../images/diagonal-fill.png') repeat-x left bottom;
+	text-align: center;
+
+	ul {
+		margin-bottom: 20px;
+	}
+}
+
+
+footer {
+	margin-top: 30px;
+
+	li {
+		size: 50px;
+		display: inline;
+
+		a {
+			color: $base-color;
+
+			&:hover {
+				color: $primary-accent;
+			}
+		}
+	}
+}
