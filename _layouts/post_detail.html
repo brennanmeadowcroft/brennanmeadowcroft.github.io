@@ -2,15 +2,23 @@
 layout: default
 ---
 
-<div class="post">
-  <header class="post-header">
-  	<img src="{{ site.base_url }}/images/{{ page.image }}" />
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-  </header>
+<div class="post row">
+	<div class="col-xs-12">
+		<header class="post-header">
+			<img src="{{ site.base_url }}/images/{{ page.image }}" />
+			<h1 class="post-title">{{ page.title }}</h1>
+			<div class="post-meta">
+				<p><span class="date">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</span> - <span class="tag">Tags: </span></p>
+				<ul>
+				  {% for tags in page.tags %}
+				    <li>{{ tags }}</li>
+				  {% endfor %}
+				</ul>
+			</div>
+		</header>
 
-  <article class="post-content">
-    {{ content }}
-  </article>
-
+		<article class="post-content">
+			{{ content }}
+		</article>
+	</div>
 </div>
